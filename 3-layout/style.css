@@ -1,0 +1,321 @@
+:root {
+    --var-color-gray: rgb(218, 218, 218);
+}
+
+*,
+*::after,
+*::before
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+}
+
+h4,
+h3 {
+    font-weight: 300;
+}
+
+.app {
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 0 1rem;
+    box-shadow: 0px 2px 0px 0px var(--var-color-gray);
+    position: relative;
+    z-index: 1;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    width: 50px;
+}
+
+.option {
+    height: 10px;
+    width: 10px;
+    background: var(--var-color-gray);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.nav > div {
+    font-size: .8rem;
+    display: inline-block;
+    margin: 0 5px;
+    color: var(--var-color-gray);
+    cursor: pointer;
+}
+
+.nav > div:last-child {
+    margin-right: 0;
+}
+
+main {
+    background: #ebe5e5;
+    color: #515252;
+    padding: 2rem 0;
+}
+
+main > section {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+main > section:nth-child(2) {
+    margin-top: 3rem;
+    display: flex;
+}
+
+.author,
+.menu {
+    display: inline-block;
+}
+
+.author h1 {
+    font-size: 2rem;
+}
+
+.author h2 {
+    font-size: 1.3rem;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul > li {
+    margin: 0 10px;
+}
+
+.menu ul li > a {
+    text-decoration: none;
+    color: #9c9a99;
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+
+.menu ul li > a.active,
+.menu ul li > a:hover {
+    color: #60d0d4;
+}
+
+.img {
+    border-radius: 50%;
+    flex: 1;
+    align-self: center;
+}
+
+.img img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+.about-me {
+    flex: 1;
+    padding-left: 2rem;
+}
+
+.about-me > * {
+    margin: 20px 0;
+}
+
+.about-me h1 {
+    font-size: 4.5rem;
+}
+
+.about-me h3 {
+    font-size: 1.5rem;
+}
+
+.about-me p {
+    line-height: 2rem;
+    font-size: 1rem;
+}
+
+.bubbles {
+    display: flex;
+}
+
+.bubbles > a {
+    text-decoration: none;
+    color: #fff;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    transition: transform 0.2s ease-in;
+}
+
+.bubbles > a:hover {
+    transform: scale(0.9);
+}
+
+.bubbles > a:first-child {
+    margin-left: 0;
+}
+
+.bg-r {
+    background: #e83555;
+}
+
+.bg-b {
+    background: #60d0d4;
+}
+
+.bg-y {
+    background: #d1c926;
+}
+
+footer {
+    padding: 2rem 0;
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer ul li {
+    flex-basis: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li a{
+    text-decoration: none;
+}
+
+footer ul li > div:last-child {
+    color: #fff;
+    font-size: .8rem;
+    padding-left: .8rem;
+    align-self: center;
+}
+
+footer ul li > div h4 {
+    font-weight: bold;
+}
+
+footer ul li div a {
+    color: #fff;
+    font-size: 1rem;
+}
+
+footer ul li div.icon {
+    align-self: center;
+    width: 40px;
+    height: 40px;
+    background: #60d0d4;
+    color: #e83555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+footer .social-media a:last-child {
+    margin-left: .5rem;
+}
+
+/*
+ *
+ * Responsive Design
+ *
+ */
+
+@media (max-width: 1024px) {
+
+    main > section {
+        padding: 0 1rem;
+    }
+
+    .bubbles > a {
+        width: 120px;
+        height: 120px;
+    }
+
+    .img {
+        flex: 0 1 40%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    main .header {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-wrap: wrap;
+    }
+
+    .bubbles > a {
+        width: 80px;
+        height: 80px;
+        font-size: .8rem;
+    }
+
+    .about-me p {
+        font-size: .9rem;
+        line-height: 1.5rem;
+    }
+
+    .about-me h1 {
+        font-size: 3.5rem;
+    }
+    
+    .about-me h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 620px) {
+    main .header {
+        text-align: center;
+    }
+
+    .menu {
+        margin-top: 1rem;
+    }
+
+    main > section:nth-child(2) {
+        display: block;
+    }
+
+    .img {
+       width: 40%;
+       margin: auto;
+    }
+
+    .about-me h1,
+    .about-me h3
+    {
+        text-align: center;
+    }
+
+    .bubbles {
+        justify-content: center;
+    }
+
+    footer ul li {
+        justify-content: flex-start;
+        margin-top: 1rem;
+    }
+}
