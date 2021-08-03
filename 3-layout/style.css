@@ -304,9 +304,12 @@ footer .social-media a:last-child {
        margin: auto;
     }
 
+    .about-me {
+        padding-left: 0;
+    }
+
     .about-me h1,
-    .about-me h3
-    {
+    .about-me h3 {
         text-align: center;
     }
 
