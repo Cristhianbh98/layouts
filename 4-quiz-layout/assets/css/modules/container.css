@@ -1,0 +1,216 @@
+#app,
+.app {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-inner {
+  position: relative;
+
+  display: flex;
+  
+  overflow: hidden;
+
+  height: 100%;
+  width: 100%;
+}
+
+#menu,
+.menu {
+  flex-basis: 20%;
+  background: #fff;
+
+  padding: var(--small);
+
+  overflow: auto;
+}
+
+#menu > *,
+.menu > * {
+  margin: var(--small) 0;
+}
+
+#main-content,
+.main-content {
+  flex: 1;
+  position: relative;
+  padding: var(--large);
+
+  background: linear-gradient(180deg, var(--primary-color) 0%, var(--thrid-color) 100%);
+
+  overflow: auto;
+
+  z-index: 1;
+}
+
+#main-content::after,
+.main-content::after {
+  position: fixed;
+  content: '';
+  top: 0;
+  left: 0;
+  right: .6rem;
+  height: 100%;
+
+  background-image: url("../../img/dice-white.png");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 25%;
+
+  z-index: -1;
+}
+ 
+.page-question #main-content::after,
+.page-question .main-content::after,
+.page-resumen .main-content::after,
+.page-resumen #main-content::after {
+  left: 20%;
+}
+
+#main-content.verbal::after {
+  background-image: url("../../img/open-book-white.png");
+  left: 22%;
+  margin-top: -10px;
+}
+
+#main-content.logic::after {
+  background-image: url("../../img/logical-thinking-white.png");
+}
+
+#main-content.attention::after {
+  background-image: url("../../img/vision-white.png");
+}
+
+.page-resumen #main-content::after {
+  background-image: none;
+}
+
+/* Container */
+
+.container {
+  margin: 0 auto;
+
+  position: relative;
+}
+
+.container > * {
+  margin: var(--medium) 0;
+}
+
+.page-welcome .container {
+  max-width: 800px;
+}
+
+.page-question .container {
+  max-width: 750px;
+}
+
+.page-resumen .container {
+  max-width:  700px;
+}
+
+/* Fixed Container */
+
+.fixed-container,
+.absolute-container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  width: auto;
+
+  margin: 0;
+
+  background: transparent;
+}
+
+.absolute-container {
+  position: absolute;
+}
+
+.fixed-container__bottom {
+  right: 2%;
+  bottom: 5%;
+}
+
+.fixed-container__top {
+  top: 5%;
+  right: 2%;
+}
+
+/* Rule container */
+
+.rule {
+  background: #fff;
+  
+  padding: var(--medium);
+  
+  color: var(--text-color);
+
+  font-size: var(--font-small-size);
+
+  border-radius: var(--border-radius);
+}
+
+.rule > * {
+  margin-bottom: var(--small);
+}
+
+.rule > *:last-child {
+  margin-bottom: 0;
+}
+
+.rule p strong {
+  color: var(--secondary-color);
+}
+
+.rule ul {
+  padding-left: var(--small);
+}
+
+.rule ul li {
+  margin-top: var(--small);
+}
+
+/* Counter */
+
+.counter-down {
+  display: inline-block;
+  background-color: #fff;
+  border-radius: var(--border-radius);
+
+  padding: 0.8rem 2rem;
+
+  font-size: var(--font-small-size);
+  color: var(--thrid-color);
+}
+
+/* Resume */
+
+.question-resume {
+  background-color: #fff;
+
+  border-radius: var(--border-radius);
+
+  padding: var(--small);
+  margin-bottom: 1rem;
+
+  font-size: var(--font-small-size);
+
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.question-resume p {
+  margin-bottom: 1rem;
+}
+
+.question-resume p:last-child {
+  margin-bottom: 0;
+}
+
+.question-resume p:first-child {
+  margin-top: 0;
+}
