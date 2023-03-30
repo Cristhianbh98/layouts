@@ -1,1 +1,1 @@
-# Maquetaciones para practica de HTML y CSS
+# Layouts examples HTML and CSS
